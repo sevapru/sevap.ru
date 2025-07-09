@@ -1,3 +1,6 @@
+# Metrics files 
+*metrics*
+
 # System files
 .DS_Store
 .DS_Store?
@@ -42,5 +45,6 @@ temp/
 *.tar.gz
 *.rar
 
-# Don't ignore fonts (they're intentionally included)
-!fonts/ 
+# Don't ignore fonts and licenses (they're intentionally included)
+!fonts/
+!FONT-LICENSES.txt 
