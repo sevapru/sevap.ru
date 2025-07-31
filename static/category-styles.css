@@ -1,0 +1,149 @@
+.site-header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    margin-bottom: 32px;
+}
+.site-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 48px;
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+.site-title a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: none !important;
+}
+.site-title a:hover {
+    color: #333;
+    border-bottom: none !important;
+}
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-info p {
+    margin: 4px 0;
+    font-size: 18px;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-weight: 600 !important;
+}
+.header-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 16px;
+}
+.header-social-icons .social-icon {
+    width: 32px;
+    height: 32px;
+    transition: all 0.2s ease;
+}
+.header-social-icons a {
+    border-bottom: none !important;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-social-icons a:hover {
+    background: #f8f9fa;
+    border-bottom: none !important;
+}
+.header-social-icons a:hover .social-icon {
+    transform: scale(1.1);
+}
+.main-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+h1, h2, h3 {
+    font-weight: 600;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 32px;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+.page-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.topic-decoration {
+    height: 12px;
+    width: 100%;
+    margin: 12px 0 0 0;
+    border-radius: 6px;
+}
+p, li {
+    font-size: 20px;
+    line-height: 1.6;
+}
+.topic-content {
+    margin-bottom: 32px;
+}
+.topic-decoration-bottom {
+    height: 12px;
+    width: 100%;
+    margin: 32px 0 0 0;
+    border-radius: 6px;
+}
+.back-home-section {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+}
+.contact-section {
+    text-align: center;
+    margin-top: 32px;
+}
+.contact-section h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: #666;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.social-icon {
+    width: 32px;
+    height: 32px;
+    transition: all 0.2s ease;
+}
+.social-icons a {
+    border-bottom: none !important;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icons a:hover {
+    background: #f8f9fa;
+    border-bottom: none !important;
+}
+.social-icons a:hover .social-icon {
+    transform: scale(1.1);
+}
+.finance .topic-decoration,
+.finance .topic-decoration-bottom {
+    background: linear-gradient(135deg, #00f5ff 0%, #0066ff 50%, #8338ec 100%);
+}
+.ml .topic-decoration,
+.ml .topic-decoration-bottom {
+    background: linear-gradient(135deg, #3a86ff 0%, #8338ec 50%, #ff006e 100%);
+}
+.robotics .topic-decoration,
+.robotics .topic-decoration-bottom {
+    background: linear-gradient(135deg, #ff9500 0%, #ff006e 50%, #8338ec 100%);
+} 

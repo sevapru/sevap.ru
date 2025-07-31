@@ -1,4 +1,3 @@
-/* Font Definitions */
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/inter.woff2') format('woff2');
@@ -6,7 +5,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/inter-500.woff2') format('woff2');
@@ -14,7 +12,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/inter-600.woff2') format('woff2');
@@ -22,7 +19,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'JetBrains Mono';
     src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
@@ -30,7 +26,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'JetBrains Mono';
     src: url('../fonts/JetBrainsMono-Medium.woff2') format('woff2');
@@ -38,7 +33,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'JetBrains Mono';
     src: url('../fonts/JetBrainsMono-SemiBold.woff2') format('woff2');
@@ -46,162 +40,308 @@
     font-style: normal;
     font-display: swap;
 }
-
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     font-size: 16px;
     line-height: 1.6;
 }
-
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #ffffff;
     color: #000000;
-    padding: 40px 20px;
+    padding: 20px 15px;
     max-width: 600px;
     margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
 }
-
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'JetBrains Mono', monospace;
     font-weight: 500;
     letter-spacing: -0.5px;
 }
-
 h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 600;
-    margin: 60px 0 40px 0;
+    margin: 15px 0 20px 0;
 }
-
 h2 {
-    font-size: 1.25rem;
-    margin: 40px 0 20px 0;
+    font-size: 1.125rem;
+    margin: 20px 0 12px 0;
     color: #666;
 }
-
 h3 {
     font-size: 1rem;
-    margin: 30px 0 15px 0;
+    margin: 15px 0 8px 0;
     color: #333;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
 }
-
-/* Links */
 a {
     color: #000000;
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
+    transition: all 0.2s ease;
     font-weight: 600;
 }
-
 a:hover {
     border-bottom-color: #000000;
 }
-
 a:focus {
     outline: 2px solid #000000;
     outline-offset: 2px;
     border-bottom-color: transparent;
 }
-
-/* Layout Components */
 .content {
-    margin-top: 60px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-
 header {
-    margin-bottom: 60px;
+    text-align: center;
 }
-
 header p {
-    margin-top: 20px;
+    margin: 10px 0 15px 0;
 }
-
 .intro {
-    margin-bottom: 60px;
+    text-align: center;
 }
-
 .intro p {
-    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+.social-icon {
+    width: 32px;
+    height: 32px;
+    transition: all 0.2s ease;
+}
+.social-icons a {
+    border-bottom: none !important;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icons a:hover {
+    background: #f8f9fa;
+    border-bottom: none !important;
+}
+.social-icons a:hover .social-icon {
+    transform: scale(1.1);
+}
+.interests {
+    text-align: center;
+}
+.interests-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+.interest-card {
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white !important;
+    transition: all 0.3s ease;
+    border-bottom: none !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.interests {
+.interest-card * {
+    position: relative;
+    z-index: 2;
+}
+
+.interest-card::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(ellipse at top left, 
+        rgba(255, 255, 255, 0.3) 0%, 
+        rgba(255, 255, 255, 0.2) 25%, 
+        rgba(255, 255, 255, 0.1) 50%, 
+        rgba(255, 255, 255, 0.05) 70%, 
+        transparent 85%
+    );
+    border-radius: 50% 20% 40% 30%;
+}
+
+.interest-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(180deg, 
+        rgba(255, 255, 255, 0.15) 0%, 
+        rgba(255, 255, 255, 0.05) 50%, 
+        transparent 100%
+    );
+    border-radius: 12px 12px 0 0;
+    pointer-events: none;
+}
+
+
+.interest-card:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-bottom: none !important;
+}
+.interest-card.finance {
+    background: linear-gradient(135deg, #00f5ff 0%, #0066ff 50%, #8338ec 100%);
+}
+.interest-card.ml {
+    background: linear-gradient(135deg, #3a86ff 0%, #8338ec 50%, #ff006e 100%);
+}
+.interest-card.robotics {
+    background: linear-gradient(135deg, #ff9500 0%, #ff006e 50%, #8338ec 100%);
+}
+.links {
+    text-align: center;
+}
+.dev-studio {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    color: #666 !important;
+    border-bottom: 1px solid #666 !important;
+    transition: all 0.2s ease;
+}
+.dev-studio:hover {
+    color: #000 !important;
+    border-bottom-color: #000 !important;
+}
+.blog-section {
+    margin: 20px -15px 0 -15px;
+    background: #000000;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+}
+.blog-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    right: -100vw;
+    bottom: 0;
+    background: #000000;
+    z-index: -1;
+}
+.blog-content {
+    background: #000000;
+}
+.blog-subscribe {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    position: relative;
+}
+.blog-subscribe > div {
+    background: #000000 !important;
+}
+.blog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    z-index: 100;
+    background: transparent;
+    border-bottom: none !important;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.blog-overlay:hover {
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: none !important;
+}
+.topic-content {
+    max-width: 100%;
+}
+.topic-content ul {
     list-style: disc;
     padding-left: 20px;
+    margin: 15px 0;
 }
-
-.interests li {
-    margin-bottom: 4px;
+.topic-content li {
+    margin-bottom: 8px;
 }
-
-.links {
-    margin-bottom: 60px;
+@media (min-width: 480px) {
+    .interests-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .interest-card {
+        font-size: 1rem;
+        padding: 18px 10px;
+    }
 }
-
-.social {
-    margin-bottom: 20px;
-}
-
-.social a {
-    display: inline-block;
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
-
-.blog {
-    margin-top: 20px;
-}
-
-.blog ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.blog ul li {
-    margin-bottom: 6px;
-}
-
-/* Footer */
-footer {
-    margin-top: 100px;
-    padding-top: 40px;
-    border-top: 1px solid #eee;
-    color: #666;
-    font-size: 0.875rem;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
+@media (min-width: 600px) {
     body {
-        padding: 20px 15px;
+        padding: 40px 20px;
     }
-    
     h1 {
-        font-size: 1.75rem;
-        margin: 40px 0 30px 0;
+        font-size: 2rem;
+        margin: 25px 0 25px 0;
     }
-    
-    .social a {
-        display: block;
-        margin: 10px 0;
+    .content {
+        gap: 25px;
+    }
+    .interests-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .social-icons {
+        gap: 18px;
+    }
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
+    .blog-section {
+        margin: 20px -20px 0 -20px;
+    }
+    .interest-card {
+        font-size: 1.1rem;
+        padding: 22px 14px;
     }
 }
-
-/* Accessibility */
+@media (min-width: 768px) {
+    .content {
+        gap: 30px;
+    }
+    .interest-card {
+        padding: 26px 18px;
+        font-size: 1.2rem;
+    }
+    .blog-section {
+        margin: 20px calc(-50vw + 50%) 0 calc(-50vw + 50%);
+        width: 100vw;
+    }
+}
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
