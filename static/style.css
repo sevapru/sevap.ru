@@ -152,71 +152,13 @@ header p {
     gap: 12px;
     margin-top: 12px;
 }
-.interest-card {
-    border-radius: 12px;
-    padding: 20px 16px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: white !important;
-    transition: all 0.3s ease;
-    border-bottom: none !important;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.interest-card * {
-    position: relative;
-    z-index: 2;
-}
-
-.interest-card::before {
-    content: '';
-    position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 80%;
-    height: 80%;
-    background: radial-gradient(ellipse at top left, 
-        rgba(255, 255, 255, 0.3) 0%, 
-        rgba(255, 255, 255, 0.2) 25%, 
-        rgba(255, 255, 255, 0.1) 50%, 
-        rgba(255, 255, 255, 0.05) 70%, 
-        transparent 85%
-    );
-    border-radius: 50% 20% 40% 30%;
-}
-
-.interest-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 40%;
-    background: linear-gradient(180deg, 
-        rgba(255, 255, 255, 0.15) 0%, 
-        rgba(255, 255, 255, 0.05) 50%, 
-        transparent 100%
-    );
-    border-radius: 12px 12px 0 0;
-    pointer-events: none;
-}
-
-
-.interest-card:hover {
-    transform: translateY(-2px) scale(1.02);
-    border-bottom: none !important;
-}
-.interest-card.finance {
-    background: linear-gradient(135deg, #00f5ff 0%, #0066ff 50%, #8338ec 100%);
-}
-.interest-card.ml {
-    background: linear-gradient(135deg, #3a86ff 0%, #8338ec 50%, #ff006e 100%);
-}
+/* Interest card styles are now in components.css */
+.interest-card.finance,
+.interest-card.ml,
 .interest-card.robotics {
-    background: linear-gradient(135deg, #ff9500 0%, #ff006e 50%, #8338ec 100%);
+    background: #ffffff;
+    color: #000000 !important;
+    border: 2px solid #000000;
 }
 .links {
     text-align: center;
