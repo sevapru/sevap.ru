@@ -153,13 +153,6 @@ header p {
     margin-top: 12px;
 }
 /* Interest card styles are now in components.css */
-.interest-card.finance,
-.interest-card.ml,
-.interest-card.robotics {
-    background: #ffffff;
-    color: #000000 !important;
-    border: 2px solid #000000;
-}
 .links {
     text-align: center;
 }
